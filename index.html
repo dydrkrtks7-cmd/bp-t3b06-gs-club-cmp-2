@@ -3,393 +3,134 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>강서 클럽 추천 및 정찰 가격 가이드 | 강서 클럽 비교</title>
-  <meta name="description" content="강서역 및 마곡 라인의 힙한 사운드 하이파이 오디오 출력 상태와 트렌디한 클럽 인테리어 강자 전격 비교 리포트.">
-  <meta name="keywords" content="강서 클럽 비교, 강서 클럽, 강서 클럽 추천, 강서 클럽 예약, 강서 클럽 가격">
+  <title>강서 클럽 예약센터 | 강서 클럽 비교</title>
+  <meta name="description" content="강서 대표 클럽 100% 정찰 요금제 가이드. 바가지 눈탱이 없는 확실한 단골 가이드북을 보장합니다.">
+  <meta name="keywords" content="강서 클럽 비교, 강서 클럽, 클럽 가격">
+  <meta name="bpaas-design-system" content="swiss-minimal">
+  <meta name="bpaas-design-theme" content="kr-swiss-minimal">
   <link rel="canonical" href="https://t3b06-gs-club-cmp-2.pages.dev/">
-  <meta name="bpaas-design-system" content="midnight-glass">
-  <meta name="bpaas-design-theme" content="kr-t3b06-gs-club-cmp-2">
   <style>
-    
     :root {
-      --bg-dark: #030712;
-      --bg-card: rgba(255, 255, 255, 0.03);
-      --border-color: rgba(255, 255, 255, 0.08);
-      --primary-neon: #111827;
-      --accent-neon: #a855f7;
-      --text-main: #f4f4f5;
-      --text-muted: #a1a1aa;
+      --bg-swiss: #1f1d1a;
+      --card-swiss: #292622;
+      --accent-swiss: #e07a5f;
+      --border-swiss: #3c3732;
+      --text-main: #f4f1de;
+      --text-muted: #beb5a3;
     }
-    
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background-color: var(--bg-swiss); color: var(--text-main); font-family: 'Inter', sans-serif; line-height: 1.75; padding: 0 30px; }
+    .swiss-container { max-width: 960px; margin: 0 auto; padding: 60px 0; }
+    header.swiss-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--border-swiss); padding-bottom: 20px; margin-bottom: 50px; }
+    .swiss-logo { font-weight: 900; font-size: 1.4rem; color: #fff; text-decoration: none; letter-spacing: 0.05em; }
+    .swiss-nav a { color: var(--text-muted); text-decoration: none; margin-left: 30px; font-weight: 700; transition: color 0.2s; }
+    .swiss-nav a:hover { color: var(--accent-swiss); }
+    .swiss-hero { padding: 40px 0 60px; border-bottom: 1px solid var(--border-swiss); margin-bottom: 50px; }
+    .swiss-hero h1 { font-size: 2.8rem; font-weight: 900; color: #fff; line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 25px; }
+    .swiss-phone-banner { display: inline-flex; align-items: center; padding: 18px 35px; background-color: var(--card-swiss); border: 2px solid var(--accent-swiss); border-radius: 4px; font-weight: 800; font-size: 1.25rem; color: #fff; text-decoration: none; transition: background 0.3s; }
+    .swiss-phone-banner:hover { background-color: var(--accent-swiss); }
+    .swiss-layout { display: grid; grid-template-columns: 1fr; gap: 40px; margin-bottom: 50px; }
+    .swiss-section { background-color: var(--card-swiss); border: 1px solid var(--border-swiss); border-radius: 4px; padding: 40px; }
+    .swiss-section h2 { font-size: 1.8rem; font-weight: 800; color: #fff; margin-bottom: 25px; border-bottom: 2px solid var(--accent-swiss); padding-bottom: 10px; display: inline-block; }
+    .swiss-p { font-size: 1.05rem; color: var(--text-muted); margin-bottom: 20px; text-align: justify; }
+    .swiss-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; margin-top: 30px; }
+    .swiss-card { border: 1px solid var(--border-swiss); border-radius: 4px; padding: 25px; background: rgba(0,0,0,0.1); }
+    .swiss-card h3 { font-size: 1.2rem; font-weight: 800; color: #fff; margin-bottom: 12px; }
+    .swiss-card p { font-size: 0.95rem; color: var(--text-muted); }
+    .swiss-review { border-top: 1px solid var(--border-swiss); padding-top: 20px; margin-top: 20px; }
+    .swiss-review-author { font-size: 0.9rem; font-weight: 800; color: var(--accent-swiss); display: flex; justify-content: space-between; margin-bottom: 8px; }
+    footer.swiss-footer { border-top: 2px solid var(--border-swiss); padding-top: 40px; margin-top: 80px; text-align: center; font-size: 0.9rem; color: var(--text-muted); }
+    footer.swiss-footer a { color: var(--text-muted); text-decoration: none; margin: 0 10px; font-weight: 700; }
+    footer.swiss-footer a:hover { color: var(--accent-swiss); }
+    @media(max-width:768px) {
+      .swiss-hero h1 { font-size: 1.9rem; }
+      header.swiss-header { flex-direction: column; gap: 15px; align-items: flex-start; }
+      .swiss-nav { width: 100%; display: flex; justify-content: space-between; }
+      .swiss-nav a { margin: 0; }
     }
-    
-    body {
-      background-color: var(--bg-dark);
-      color: var(--text-main);
-      font-family: system-ui, -apple-system, sans-serif;
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-    
-    .glow-header {
-      background: rgba(0, 0, 0, 0.6);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border-color);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    
-    .nav-container {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 20px;
-    }
-    
-    .logo-glow {
-      font-size: 1.5rem;
-      font-weight: 900;
-      color: #fff;
-      text-decoration: none;
-      background: linear-gradient(135deg, #fff, var(--accent-neon));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-    }
-    
-    .nav-links a {
-      color: var(--text-muted);
-      text-decoration: none;
-      margin-left: 28px;
-      font-size: 0.98rem;
-      font-weight: 700;
-      transition: color 0.3s, text-shadow 0.3s;
-    }
-    
-    .nav-links a:hover {
-      color: var(--accent-neon);
-      text-shadow: 0 0 8px var(--accent-neon);
-    }
-    
-    .hero-glow {
-      padding: 140px 20px 100px;
-      text-align: center;
-      background: radial-gradient(circle at top, var(--primary-neon) 0%, transparent 75%);
-      position: relative;
-    }
-    
-    .hero-glow h1 {
-      font-size: 3.2rem;
-      font-weight: 900;
-      margin-bottom: 24px;
-      letter-spacing: -0.06em;
-      line-height: 1.25;
-    }
-    
-    .gradient-txt {
-      background: linear-gradient(135deg, #fff, var(--accent-neon));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-    }
-    
-    .hero-glow p {
-      font-size: 1.25rem;
-      color: var(--text-muted);
-      max-width: 750px;
-      margin: 0 auto 35px;
-    }
-    
-    .phone-bar {
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.04), transparent);
-      padding: 18px;
-      border-top: 1px solid var(--border-color);
-      border-bottom: 1px solid var(--border-color);
-      border-radius: 8px;
-      margin: 25px auto;
-      max-width: 600px;
-      font-size: 1.4rem;
-      font-weight: 900;
-      letter-spacing: 0.05em;
-      text-align: center;
-    }
-    
-    .phone-bar a {
-      color: var(--accent-neon);
-      text-decoration: none;
-      transition: text-shadow 0.3s;
-    }
-    
-    .phone-bar a:hover {
-      text-shadow: 0 0 10px var(--accent-neon);
-    }
-    
-    .neon-btn {
-      display: inline-block;
-      padding: 15px 36px;
-      background: linear-gradient(135deg, var(--primary-neon), var(--accent-neon));
-      color: white;
-      text-decoration: none;
-      font-weight: 800;
-      border-radius: 9999px;
-      box-shadow: 0 4px 22px rgba(236, 72, 153, 0.35);
-      transition: all 0.3s ease;
-      letter-spacing: 0.03em;
-    }
-    
-    .neon-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(236, 72, 153, 0.65);
-    }
-    
-    .sec-wrap {
-      max-width: 950px;
-      margin: 0 auto;
-      padding: 60px 20px;
-    }
-    
-    .glass-box {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 24px;
-      padding: 45px;
-      backdrop-filter: blur(10px);
-      margin-bottom: 45px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    }
-    
-    .glass-box h2 {
-      font-size: 2.2rem;
-      font-weight: 900;
-      margin-bottom: 28px;
-      color: #fff;
-      border-left: 5px solid var(--accent-neon);
-      padding-left: 20px;
-      letter-spacing: -0.04em;
-    }
-    
-    .glass-box p {
-      font-size: 1.1rem;
-      color: var(--text-muted);
-      margin-bottom: 24px;
-      text-align: justify;
-    }
-    
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 28px;
-      margin-top: 36px;
-    }
-    
-    .mini-card {
-      background: rgba(255, 255, 255, 0.015);
-      border: 1px solid var(--border-color);
-      border-radius: 16px;
-      padding: 28px;
-      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
-    }
-    
-    .mini-card:hover {
-      border-color: var(--accent-neon);
-      transform: translateY(-3px);
-      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
-    }
-    
-    .mini-card h3 {
-      font-size: 1.3rem;
-      font-weight: 800;
-      color: #fff;
-      margin-bottom: 14px;
-      letter-spacing: -0.02em;
-    }
-    
-    .mini-card p {
-      font-size: 0.98rem;
-      color: var(--text-muted);
-      margin-bottom: 0;
-    }
-    
-    .premium-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 30px 0;
-      color: var(--text-main);
-    }
-    
-    .premium-table th {
-      background: rgba(255,255,255,0.03);
-      padding: 16px;
-      border-bottom: 2px solid var(--border-color);
-      font-weight: 800;
-      text-align: left;
-    }
-    
-    .premium-table td {
-      padding: 16px;
-      border-bottom: 1px solid var(--border-color);
-      font-size: 1.05rem;
-    }
-    
-    .premium-table tbody tr:hover {
-      background: rgba(255,255,255,0.01);
-    }
-    
-    .ugc-review {
-      border-top: 1px solid var(--border-color);
-      padding-top: 24px;
-      margin-top: 24px;
-    }
-    
-    .reviewer-meta {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.88rem;
-      color: var(--accent-neon);
-      margin-bottom: 10px;
-      font-weight: 700;
-    }
-    
-    .reviewer-text {
-      font-size: 1.02rem;
-      color: var(--text-main);
-      font-style: italic;
-    }
-    
-    footer {
-      background: rgba(0, 0, 0, 0.5);
-      border-top: 1px solid var(--border-color);
-      padding: 50px 20px;
-      text-align: center;
-      font-size: 0.95rem;
-      color: var(--text-muted);
-    }
-    
-    footer p {
-      margin-bottom: 12px;
-    }
-    
-    footer a {
-      color: var(--text-muted);
-      text-decoration: none;
-      margin: 0 12px;
-      font-weight: 700;
-      transition: color 0.3s;
-    }
-    
-    footer a:hover {
-      color: var(--accent-neon);
-    }
-    
-    @media(max-width: 768px) {
-      .hero-glow h1 {
-        font-size: 2.3rem;
-      }
-      .nav-links {
-        display: none;
-      }
-      .glass-box {
-        padding: 28px;
-      }
-      .premium-table {
-        font-size: 0.9rem;
-      }
-    }
-  
   </style>
   <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "강서 클럽 가이드",
-      "image": "https://t3b06-gs-club-cmp-2.pages.dev/og.jpg",
-      "telephone": "010-6279-0862",
-      "url": "https://t3b06-gs-club-cmp-2.pages.dev/",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "강서",
-        "addressCountry": "KR"
-      }
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "강서 클럽 안심 가이드",
+    "url": "https://t3b06-gs-club-cmp-2.pages.dev/",
+    "telephone": "010-6279-0862",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "강서",
+      "addressCountry": "KR"
     }
+  }
   </script>
 </head>
 <body>
-
-  <header class="glow-header">
-    <div class="nav-container">
-      <a href="index.html" class="logo-glow">강서 클럽 포털</a>
-      <nav class="nav-links">
+  <div class="swiss-container">
+    <header class="swiss-header">
+      <a href="index.html" class="swiss-logo">SWISS 강서 CORE</a>
+      <nav class="swiss-nav">
         <a href="index.html">홈</a>
         <a href="about.html">상세정보</a>
         
       </nav>
-    </div>
-  </header>
+    </header>
+    
+    <main>
+      <section class="swiss-hero">
+        <h1>강서 클럽 정찰 가이드</h1>
+        <p style="font-size:1.15rem; color:var(--text-muted); margin-bottom:30px;">복잡한 추가 요금 billing 거품 마찰 없는 극상의 릴렉싱 도파민 파티를 설계합니다 브로.</p>
+        <a href="tel:01062790862" class="swiss-phone-banner">📞 tel:010-6279-0862</a>
+      </section>
 
-  <section class="hero-glow">
-    <h1>강서 <span class="gradient-txt">클럽</span> 정찰제 가이드</h1>
-    <p>강서 클럽 비교로 고민하는 형들을 위한 내돈내산 진짜 로컬 후기와 안심 예약 시스템!</p>
-    <div class="phone-bar">
-      📞 실시간 예약 및 문의: <a href="tel:010-6279-0862">010-6279-0862</a>
-    </div>
-    <a href="about.html" class="neon-btn">상세정보 및 가이드 보러가기</a>
-  </section>
-
-  <main class="sec-wrap">
-    <div class="glass-box">
-      <h2>강서 클럽 로컬 정직한 리포트</h2>
-      <p>요즘 금요일이나 주말 밤에 진짜 힙하고 물 좋은 사운드 속에서 신나게 리듬 타고 흔들며 피로 싹 털고 싶은데, 어디로 가야 눈탱이 바가지 가격이나 불투명한 테이블 요금 장난질 안 당하고 안전하게 VIP급 힐링을 할 수 있는지 골머리 앓아 본 동생들 많지? 특히 강서 인근이나 대학가 골목에서 제대로 된 힙한 일렉/테크노 클럽 분석을 찾으려고 구글 네이버 검색해 보면 죄다 조작 광고들만 널려 있어서 분노가 치밀었을 거임. 그래서 이 형이 강서 마포 일대에서 사운드 출력 진심 심장 멎게 개쩌는 1등 클럽의 투명 정찰 주종 가격표와 찐정보를 다이렉트로 공유해 줌. 010-6279-0862 이 번호로 연락 때려라.</p>
-      <p><h3>클럽에서 테이블 눈탱이 원천 봉쇄하고 품격 있게 밤을 지배하는 법칙</h3>
-      <p>클럽은 일반 칙칙한 감성주점이나 복잡한 라운지와는 사운드 인프라와 테이블의 가치 자체가 완전히 다름. 눈탱이 바가지를 완벽 차단하기 위해 형은 일체 당일 현장 추가 요금 꼼수를 쓰지 못하도록 100% 투명한 정찰 주종 패키지로만 라인을 설계해 놨음. 테이블 잡고 보틀 주문 시 빌지에 웨이터가 슬그머니 추가 과일비나 가짜 샴페인 요금을 절대 못 얹게 칼같이 정리 완료했으니까 안심하고 최고의 일렉 음악과 조명 텐션을 즐겨라. 생일 이벤트, 동창 단체 대규모 불금 모임, 비즈니스 쿨한 접대 파티 등 어떤 자리든 형 직통으로 오면 최고로 전망 좋고 무대 직통인 VIP 골드 테이블로 사전 확보해 드린다.</p>
-      <p>특히 이곳 강서 클럽 연합 라인은 매달 독일/프랑스 수입제 프리미엄 스피커 앰프 믹서 하드웨어 하이파이 업그레이드를 단행하고 있어서 비트 꽂히는 타격감 자체가 차원이 다름을 보증한다. 📞 직통 예약 번호 010-6279-0862로 편하게 문자 한 통 '형 오늘 달린다 테이블 찜' 때려주면, 도착하자마자 기나긴 웨이팅 단 1초도 없이 입구 프리패스로 즉석 에스코트 진입 잡아주고 샴페인 서비스 한 병 낭랑하게 꽂아줄 테니까 고민 묶어두고 다이렉트로 와서 시원하게 놀다 가라. 형이 처음부터 끝까지 완전 에스코트해 준다.</p></p>
-    </div>
-
-    <div class="glass-box">
-      <h2>단골 형들의 리얼 찐후기</h2>
+      <div class="swiss-layout">
+        <div class="swiss-section">
+          <h2>정직한 리포트 아카이브</h2>
+          <p class="swiss-p">어이 브로! 금요일이나 주말 밤만 되면 뇌 속에서 뜨거운 비트가 요동치고 도파민 폭발하고 싶어 미치겠는데, 막상 클럽 테이블 잡으려고 삐끼들 연락해 보면 요금 바가지 장난질에 추가 보틀 billing 마찰 때문에 정 뚝 떨어져서 기분 잡쳤던 적 참 많지 브로? 형이 로컬 강서와 망원 일대에서 가장 힙하고 사운드 시스템 지대하게 설계된 명품 클럽들을 정밀 대조해서 정찰 가격으로 테이블 안심 예약할 수 있는 다이렉트 채널을 굳혔다 브로. 최고 사양 스피커 앰프와 우퍼 출력 밸런싱이 끝내주는 메인 무대 바로 앞 알짜 테이블을 장난질 요금 단 1%도 없이 정직하게 선점하고 싶다면, 형의 1대1 예약 번호인 📞 010-6279-0862 로 문자 한 통 딱 때려라 브로.
       
-      <div class="ugc-review">
-        <div class="reviewer-meta">
-          <span>홍대비트 (29세, 남)</span>
-          <span>⭐⭐⭐⭐⭐</span>
-        </div>
-        <p class="reviewer-text">"합정 쪽 놀러 와서 친구들이랑 예약 번호 010-6279-0862로 테이블 잡고 갔는데 진심 사운드 파워가 오집니다. 서비스 샴페인 혜자네요!"</p>
-      </div>
-
-      <div class="ugc-review">
-        <div class="reviewer-meta">
-          <span>클럽왕 (27세, 남)</span>
-          <span>⭐⭐⭐⭐⭐</span>
-        </div>
-        <p class="reviewer-text">"내돈내산 진짜 후기입니다. 빌지 가격표 나온 그대로만 깔끔 마감 정산되고 바가지 아예 없습니다. 에스코트 텐션 쩔어요!"</p>
-      </div>
-
-      <div class="ugc-review">
-        <div class="reviewer-meta">
-          <span>일렉러 (32세, 남)</span>
-          <span>⭐⭐⭐⭐⭐</span>
-        </div>
-        <p class="reviewer-text">"스피커 비트감이 온몸 뼈를 때려 피로가 다 날아갔네요 ㅋㅋㅋ 실장님 친절함 덕분에 오랜만에 기분 지리는 밤 보냈음다."</p>
-      </div>
-    </div>
-  </main>
-
-  <footer>
-    <p><strong>강서 클럽 찐후기 가이드 포털</strong></p>
-    <p>주소: 서울특별시 강서구 일대 | 연락처: 010-6279-0862</p>
-    <p>
-      <a href="index.html">홈</a> | 
-      <a href="about.html">상세정보</a>
+      우리가 연계하는 클럽 존은 사운드 디렉팅 자체가 차원이 다르다. 고막을 기분 좋게 울리는 타격감 강한 일렉트릭 테크노 EDM 비트가 전두엽을 때려눕혀 온갖 일상의 잡생각과 피로를 한 방에 우주 밖으로 날려 보낸다 브로. 테이블 가격도 사전에 확약한 금액만 투명하게 딱 마감되게 통제하니까 빌지 계산할 때 서로 민망한 트러블 생길 우려도 원천 물리적으로 지워버렸다. 
       
-    </p>
-    <p style="margin-top: 16px; opacity: 0.5;">&copy; 2026 강서 클럽 Portal. All Rights Reserved. 본 사이트는 성인 전용 정보 포털입니다.</p>
-  </footer>
+      멋진 동호회 불금 파티나 남성 소모임, 혹은 오랜만에 뭉친 찐친구들과의 화끈한 친목 도파민 릴렉스를 계획하고 있다면 망설이지 마라. 📞 010-6279-0862 로 사전 핫라인 예약을 때려놓으면, 입구 바운서 대기 웨이팅 렉 현상 전혀 없이 1초 프리패스 입장은 물론이고 최고급 샴페인 한 병까지 무상 지원 혜택으로 실장님이 기분 좋게 안겨줄 거다 브로!</p>
+        </div>
 
+        <div class="swiss-section">
+          <h2>3대 프리미엄 가치</h2>
+          <div class="swiss-grid">
+            <div class="swiss-card">
+              <h3>1. 정찰 보장제</h3>
+              <p>어설픈 호객꾼들의 바가지 billing 마찰을 원천 차단하고 사전에 딱 약속한 요금제만 완벽하게 받습니다 브로.</p>
+            </div>
+            <div class="swiss-card">
+              <h3>2. 안심 위생 소독</h3>
+              <p>룸 내부 에어컨 안심 소독 환기 위생 등급을 매 타임 엄격 평가하여 극도로 깨끗한 시설만 제공합니다 브로.</p>
+            </div>
+            <div class="swiss-card">
+              <h3>3. 사운드 최적 튜닝</h3>
+              <p>최상급 앰프 및 하이파이 우퍼 공진 스펙을 자랑하여 노래 부를 때 1ms 지연 없는 만족을 줍니다 브로.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiss-section">
+          <h2>단골 형들의 라이브 평점</h2>
+          <div class="swiss-review">
+            <div class="swiss-review-author"><span>강서가왕 (28, 남)</span><span>⭐⭐⭐⭐⭐</span></div>
+            <p style="font-style:italic;">"전화번호 010-6279-0862 저장해 두고 매번 연락 때리고 가는데 확실히 실장님이 친절히 서비스 팍팍 넣어줘서 아주 만족합니다."</p>
+          </div>
+          <div class="swiss-review">
+            <div class="swiss-review-author"><span>가성비짱짱 (31, 남)</span><span>⭐⭐⭐⭐⭐</span></div>
+            <p style="font-style:italic;">"룸 청결 상태가 완전 A급이고 공기도 쾌적해서 여친 데려왔을 때 최고의 분위기를 만들었습니다 브로!"</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="swiss-footer">
+      <p>서울특별시 강서 일대 | 연락처: 010-6279-0862</p>
+      <p style="margin-top:15px;">
+        <a href="index.html">홈</a> | <a href="about.html">상세정보</a> 
+      </p>
+      <p style="margin-top:20px; opacity:0.4;">&copy; 2026 강서 클럽 Guide. All Rights Reserved.</p>
+    </footer>
+  </div>
 </body>
 </html>
