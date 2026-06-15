@@ -1,88 +1,546 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>강서 클럽 상세 정보 | 강서 클럽 비교</title>
-  <meta name="description" content="강서의 명소인 가양역, 강서구청 사거리, 발산역 먹자골목 인근 가성비 클럽 팩트북.">
-  <meta name="bpaas-design-system" content="swiss-minimal">
-  <meta name="bpaas-design-theme" content="kr-swiss-minimal">
-  <style>
-    :root {
-      --bg-swiss: #1f1d1a;
-      --card-swiss: #292622;
-      --accent-swiss: #e07a5f;
-      --border-swiss: #3c3732;
-      --text-main: #f4f1de;
-      --text-muted: #beb5a3;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-raw-concrete">
+    <meta name="description" content="강서 클럽 세 곳을 까발린다. Hotspot, Underground, Rooftop — 가격, 음악, 분위기, 꼰대력까지 전격 비교. 선택은 니 몫이다. 강서 클럽 비교의 끝판왕.">
+    <meta name="keywords" content="강서클럽, 강서클럽비교, 강서핫스팟, 강서언더그라운드, 강서루프탑, 클럽추천, 강서밤문화">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://t3b06-gs-club-cmp-2.vercel.app">
+    <meta property="og:title" content="강서 클럽 비교 – 거품 까는 비교 리뷰">
+    <meta property="og:description" content="강서 대표 클럽 세 곳을 냉혹하게 비교한다. 예약, 가격, 인싸력까지. 결제 전에 여기부터 봐라.">
+    <meta property="og:image" content="https://t3b06-gs-club-cmp-2.vercel.app/og-concrete.jpg">
+    <meta property="og:url" content="https://t3b06-gs-club-cmp-2.vercel.app">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="강서 클럽 비교 – 거품 까는 비교 리뷰">
+    <meta name="twitter:description" content="강서 대표 클럽 세 곳을 냉혹하게 비교한다. 예약, 가격, 인싸력까지. 결제 전에 여기부터 봐라.">
+    <meta name="twitter:image" content="https://t3b06-gs-club-cmp-2.vercel.app/og-concrete.jpg">
+    <title>강서 클럽 비교 – Hotspot vs Underground vs Rooftop</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "강서클럽비교",
+      "url": "https://t3b06-gs-club-cmp-2.vercel.app",
+      "telephone": "+82-10-6279-0862",
+      "areaServed": "강서구, 서울",
+      "description": "강서구 클럽 세 곳을 직접 방문하고 비교하는 리뷰 사이트. 가격, 음악, 분위기, 서비스를 까발린다."
     }
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { background-color: var(--bg-swiss); color: var(--text-main); font-family: 'Inter', sans-serif; line-height: 1.75; padding: 0 30px; }
-    .swiss-container { max-width: 960px; margin: 0 auto; padding: 60px 0; }
-    header.swiss-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--border-swiss); padding-bottom: 20px; margin-bottom: 50px; }
-    .swiss-logo { font-weight: 900; font-size: 1.4rem; color: #fff; text-decoration: none; letter-spacing: 0.05em; }
-    .swiss-nav a { color: var(--text-muted); text-decoration: none; margin-left: 30px; font-weight: 700; transition: color 0.2s; }
-    .swiss-nav a:hover { color: var(--accent-swiss); }
-    .swiss-hero { padding: 40px 0 60px; border-bottom: 1px solid var(--border-swiss); margin-bottom: 50px; }
-    .swiss-hero h1 { font-size: 2.8rem; font-weight: 900; color: #fff; line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 25px; }
-    .swiss-phone-banner { display: inline-flex; align-items: center; padding: 18px 35px; background-color: var(--card-swiss); border: 2px solid var(--accent-swiss); border-radius: 4px; font-weight: 800; font-size: 1.25rem; color: #fff; text-decoration: none; transition: background 0.3s; }
-    .swiss-phone-banner:hover { background-color: var(--accent-swiss); }
-    .swiss-layout { display: grid; grid-template-columns: 1fr; gap: 40px; margin-bottom: 50px; }
-    .swiss-section { background-color: var(--card-swiss); border: 1px solid var(--border-swiss); border-radius: 4px; padding: 40px; }
-    .swiss-section h2 { font-size: 1.8rem; font-weight: 800; color: #fff; margin-bottom: 25px; border-bottom: 2px solid var(--accent-swiss); padding-bottom: 10px; display: inline-block; }
-    .swiss-p { font-size: 1.05rem; color: var(--text-muted); margin-bottom: 20px; text-align: justify; }
-    .swiss-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; margin-top: 30px; }
-    .swiss-card { border: 1px solid var(--border-swiss); border-radius: 4px; padding: 25px; background: rgba(0,0,0,0.1); }
-    .swiss-card h3 { font-size: 1.2rem; font-weight: 800; color: #fff; margin-bottom: 12px; }
-    .swiss-card p { font-size: 0.95rem; color: var(--text-muted); }
-    .swiss-review { border-top: 1px solid var(--border-swiss); padding-top: 20px; margin-top: 20px; }
-    .swiss-review-author { font-size: 0.9rem; font-weight: 800; color: var(--accent-swiss); display: flex; justify-content: space-between; margin-bottom: 8px; }
-    footer.swiss-footer { border-top: 2px solid var(--border-swiss); padding-top: 40px; margin-top: 80px; text-align: center; font-size: 0.9rem; color: var(--text-muted); }
-    footer.swiss-footer a { color: var(--text-muted); text-decoration: none; margin: 0 10px; font-weight: 700; }
-    footer.swiss-footer a:hover { color: var(--accent-swiss); }
-    @media(max-width:768px) {
-      .swiss-hero h1 { font-size: 1.9rem; }
-      header.swiss-header { flex-direction: column; gap: 15px; align-items: flex-start; }
-      .swiss-nav { width: 100%; display: flex; justify-content: space-between; }
-      .swiss-nav a { margin: 0; }
-    }
-  </style>
+    </script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background: #1a1a1a;
+            color: #e5e5e5;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-weight: bold;
+            line-height: 1.2;
+            max-width: none;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        h1, h2, h3 {
+            font-weight: 900;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+        }
+        h1 {
+            font-size: clamp(3.2rem, 12vw, 6rem);
+            line-height: 0.9;
+            color: #ff6b35;
+            text-shadow: 4px 4px 0 #1a1a1a, 6px 6px 0 rgba(255,107,53,0.3);
+            transform: skew(-3deg) rotate(-1deg);
+            margin: 0 -0.1em 0.3em -0.1em;
+            border-bottom: 6px solid #ff6b35;
+            display: inline-block;
+            padding-bottom: 0.15em;
+        }
+        h2 {
+            font-size: clamp(2.4rem, 6vw, 3.8rem);
+            color: #e5e5e5;
+            border-left: 8px solid #ff6b35;
+            padding-left: 24px;
+            margin: 0 0 48px -12px;
+            transform: skew(-2deg);
+        }
+        h3 {
+            font-size: 1.8rem;
+            color: #ff6b35;
+            margin-bottom: 16px;
+            border-bottom: 4px solid #ff6b35;
+            display: inline-block;
+            padding-bottom: 8px;
+        }
+        p {
+            font-weight: 400;
+            font-size: 1.1rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+            max-width: 72ch;
+        }
+        a {
+            color: #ff6b35;
+            text-decoration: none;
+            border-bottom: 3px solid transparent;
+            transition: border-color 0.15s;
+        }
+        a:hover {
+            border-color: #ff6b35;
+        }
+        img, svg {
+            max-width: 100%;
+            display: block;
+        }
+        /* 레이아웃 */
+        .wrapper {
+            padding: 48px 48px 80px;
+            max-width: 100%;
+        }
+        @media (max-width: 768px) {
+            .wrapper {
+                padding: 24px 20px 60px;
+            }
+        }
+        section {
+            margin-bottom: 80px;
+            position: relative;
+        }
+        /* 헤더 */
+        header {
+            padding: 32px 48px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 4px solid #ff6b35;
+            background: #111;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #ff6b35;
+            letter-spacing: -0.04em;
+            transform: rotate(-1deg);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .logo svg {
+            width: 48px;
+            height: 48px;
+            fill: #ff6b35;
+            filter: drop-shadow(2px 2px 0 #e5e5e5);
+        }
+        .logo span {
+            color: #e5e5e5;
+            border: 3px solid #ff6b35;
+            padding: 4px 12px;
+            transform: skew(-5deg);
+        }
+        nav ul {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        nav a {
+            color: #e5e5e5;
+            border: none;
+            padding: 8px 12px;
+            border: 3px solid transparent;
+            transition: 0.1s;
+        }
+        nav a:hover {
+            border-color: #ff6b35;
+            color: #ff6b35;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            background: transparent;
+            border: none;
+            padding: 8px;
+        }
+        .hamburger span {
+            display: block;
+            width: 36px;
+            height: 4px;
+            background: #ff6b35;
+            border: 2px solid #e5e5e5;
+        }
+        @media (max-width: 768px) {
+            header {
+                padding: 20px 24px;
+                flex-wrap: wrap;
+            }
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                gap: 8px;
+                background: #1a1a1a;
+                padding: 24px 16px;
+                border: 4px solid #ff6b35;
+                margin-top: 16px;
+            }
+            nav ul.open {
+                display: flex;
+            }
+            .hamburger {
+                display: flex;
+            }
+        }
+        /* 히어로 */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            align-items: center;
+            margin-bottom: 80px;
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -24px;
+            left: -48px;
+            width: 180px;
+            height: 180px;
+            background: repeating-linear-gradient(45deg, #ff6b35 0, #ff6b35 8px, transparent 8px, transparent 16px);
+            opacity: 0.3;
+            z-index: 0;
+            transform: rotate(12deg);
+        }
+        .hero-text {
+            z-index: 1;
+        }
+        .hero-text p {
+            font-size: 1.4rem;
+            border-left: 8px solid #e5e5e5;
+            padding-left: 24px;
+            margin-top: 16px;
+            font-weight: 600;
+            transform: skew(-2deg);
+        }
+        .hero-visual {
+            background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 70%, #ff6b35 100%);
+            border: 6px solid #ff6b35;
+            padding: 48px 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transform: rotate(1deg) skew(-1deg);
+            box-shadow: -12px 12px 0 #e5e5e5;
+            min-height: 320px;
+            text-align: center;
+        }
+        .hero-visual span {
+            font-size: 5rem;
+            line-height: 1;
+        }
+        .hero-visual .big-number {
+            font-size: 8rem;
+            font-weight: 900;
+            color: #ff6b35;
+            text-shadow: 6px 6px 0 #1a1a1a;
+            letter-spacing: -0.08em;
+            margin-top: 12px;
+        }
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            .hero-visual {
+                min-height: 200px;
+                padding: 32px 20px;
+            }
+            .hero-visual .big-number {
+                font-size: 5rem;
+            }
+        }
+        /* 비교 카드 */
+        .compare-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+        }
+        .compare-card {
+            background: #222;
+            border: 4px solid #e5e5e5;
+            padding: 32px 24px;
+            transform: rotate(var(--rot, 0deg)) skew(var(--skew, 0deg));
+            box-shadow: 8px 8px 0 #ff6b35;
+            transition: 0.15s;
+            position: relative;
+        }
+        .compare-card:nth-child(odd) {
+            --rot: -1deg;
+            --skew: 0.5deg;
+        }
+        .compare-card:nth-child(even) {
+            --rot: 1deg;
+            --skew: -0.5deg;
+        }
+        .compare-card:hover {
+            box-shadow: 12px 12px 0 #ff6b35;
+            transform: rotate(0deg) skew(0deg);
+            border-color: #ff6b35;
+        }
+        .compare-card h3 {
+            font-size: 2rem;
+            margin-bottom: 8px;
+            border-bottom-width: 6px;
+        }
+        .compare-card .rating {
+            font-size: 2rem;
+            color: #ff6b35;
+            letter-spacing: 4px;
+            margin: 12px 0;
+        }
+        .compare-card ul {
+            list-style: none;
+            margin-top: 16px;
+        }
+        .compare-card li {
+            padding: 8px 0;
+            border-bottom: 2px solid #333;
+            display: flex;
+            justify-content: space-between;
+            font-weight: 400;
+        }
+        .compare-card li strong {
+            color: #ff6b35;
+        }
+        .badge {
+            background: #ff6b35;
+            color: #1a1a1a;
+            font-weight: 900;
+            font-size: 0.75rem;
+            padding: 4px 12px;
+            display: inline-block;
+            transform: skew(-8deg);
+            margin-bottom: 12px;
+        }
+        /* UGC 리뷰 섹션 */
+        .reviews {
+            background: #151515;
+            padding: 48px 48px 64px;
+            border-top: 6px solid #ff6b35;
+            border-bottom: 6px solid #ff6b35;
+            margin: 0 -48px 80px;
+        }
+        @media (max-width: 768px) {
+            .reviews {
+                padding: 32px 20px 48px;
+                margin: 0 -20px 60px;
+            }
+        }
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+        }
+        .review-card {
+            background: #1e1e1e;
+            border: 4px solid #ff6b35;
+            padding: 24px 20px;
+            transform: rotate(var(--rot, 0deg));
+            box-shadow: 6px 6px 0 #e5e5e5;
+        }
+        .review-card:nth-child(odd) {
+            --rot: 0.5deg;
+        }
+        .review-card:nth-child(even) {
+            --rot: -0.5deg;
+        }
+        .review-card .nick {
+            font-weight: 900;
+            color: #ff6b35;
+            border-bottom: 3px solid #ff6b35;
+            padding-bottom: 8px;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .review-card .date {
+            font-weight: 400;
+            font-size: 0.85rem;
+            color: #aaa;
+        }
+        .review-card .stars {
+            color: #ff6b35;
+            font-size: 1.6rem;
+            letter-spacing: 2px;
+        }
+        .review-card .content {
+            margin-top: 12px;
+            font-weight: 400;
+            line-height: 1.5;
+            font-size: 1rem;
+            font-style: italic;
+            border-left: 4px solid #ff6b35;
+            padding-left: 16px;
+        }
+        /* 푸터 */
+        footer {
+            border-top: 6px solid #ff6b35;
+            padding: 48px 48px 32px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 32px;
+            background: #111;
+        }
+        footer .copy {
+            font-weight: 400;
+            opacity: 0.7;
+        }
+        footer .phone a {
+            font-size: 1.4rem;
+            font-weight: 900;
+            border: 4px solid #ff6b35;
+            padding: 12px 24px;
+            display: inline-block;
+            color: #ff6b35;
+            background: #1a1a1a;
+            text-decoration: none;
+            transform: skew(-3deg);
+        }
+        footer .phone a:hover {
+            background: #ff6b35;
+            color: #1a1a1a;
+        }
+        @media (max-width: 768px) {
+            footer {
+                flex-direction: column;
+                text-align: center;
+                padding: 32px 20px;
+            }
+        }
+        /* 유틸 */
+        .cta-button {
+            display: inline-block;
+            background: #ff6b35;
+            color: #1a1a1a;
+            font-weight: 900;
+            font-size: 1.2rem;
+            padding: 16px 40px;
+            border: 4px solid #e5e5e5;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transform: skew(-5deg);
+            transition: 0.1s;
+            margin-top: 32px;
+            text-decoration: none;
+        }
+        .cta-button:hover {
+            background: #e5e5e5;
+            border-color: #ff6b35;
+            color: #1a1a1a;
+        }
+        .skew-block {
+            transform: skew(-2deg);
+        }
+        .highlight {
+            color: #ff6b35;
+        }
+        .grain-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+            opacity: 0.5;
+            mix-blend-mode: overlay;
+        }
+    </style>
 </head>
 <body>
-  <div class="swiss-container">
-    <header class="swiss-header">
-      <a href="index.html" class="swiss-logo">SWISS 강서 CORE</a>
-      <nav class="swiss-nav">
-        <a href="index.html">홈</a>
-        <a href="about.html">상세정보</a>
-        
-      </nav>
-    </header>
-    
-    <main>
-      <section class="swiss-hero">
-        <h1>로컬 상세 지리 및 스펙 요약</h1>
-        <p style="font-size:1.1rem; color:var(--text-muted);">형이 직접 발로 뛰어 위생 필터링을 거친 리얼 팩트북 리포트다 브로.</p>
-      </section>
+<div class="grain-overlay"></div>
+<header>
+    <div class="logo">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="4" width="40" height="40" stroke="#e5e5e5" stroke-width="6" fill="none"/>
+            <polygon points="24,10 34,28 14,28" fill="#ff6b35"/>
+            <circle cx="24" cy="24" r="6" fill="#1a1a1a" stroke="#e5e5e5" stroke-width="3"/>
+        </svg>
+        <span>GS CLUB</span>
+    </div>
+    <nav>
+        <button class="hamburger" aria-label="메뉴 열기" onclick="document.querySelector('nav ul').classList.toggle('open')">
+            <span></span><span></span><span></span>
+        </button>
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">클럽</a></li>
+            <li><a href="#">리뷰</a></li>
+            <li><a href="#">연락</a></li>
+        </ul>
+    </nav>
+</header>
 
-      <div class="swiss-layout">
-        <div class="swiss-section">
-          <h2>강서 랜드마크 기반 최적 루트</h2>
-          <p class="swiss-p">로컬 밤의 지배자가 되고 싶은 힙한 클러버 브로들을 위해, 눈탱이 빌링 시스템을 완벽 차단하고 정직하게 릴렉싱을 보장하는 특급 정보 아카이브 페이지다 브로. 이리저리 뿌려진 가짜 스폰 찌라시 정보가 아니라, 형이 직접 발로 뛰어 테이블 배치, 사운드 데시벨 조율 상태, 그리고 주종 정찰제 안전성을 100% 모니터링하고 승인한 리스트다. 출발하기 전 무조건 형의 전용 추천 번호 📞 010-6279-0862 로 통화 매칭을 싹 걸어서 최적의 VIP 테이블을 무상 보호받길 바란다.
-      
-      비트를 사랑하는 진사 브로들의 리얼 후기 컬렉션이다:
-      - **일렉하우스 (29, 프리랜서 디자이너)**: '망원역이랑 합정 주변에서 테이블 잡을 때마다 삐끼들이 서비스 샴페인 먹튀해서 열받았는데, 형님 핫라인 010-6279-0862 로 통하니까 확실히 정찰가로 챙겨주네요. 스피커 비트 사운드 대박입니다!'
-      - **춤꾼브로 (27, 댄스 아카데미 강사)**: '사운드 앰프 출력 공진이 잘 맞아서 귀 먹먹함 1도 없이 아주 쾌적하게 춤추고 스트레스 다 털었습니다. 룸 살균 청소도 매 타임 돌려서 쾌적함의 차원이 다릅니다 브로.'
-      - **안심테이블 (33, 스타트업 이사)**: '해외 바이어들이 힙한 곳을 보여달라 해서 프라이빗 VIP 테이블을 010-6279-0862 직통 예약하고 방문했는데 에스코트부터 샴페인 무상 업글 혜택까지 대접 제대로 받아 거래 성사까지 직행했습니다!'</p>
-          <p class="swiss-p">주요 연계 스팟들은 가양역, 강서구청 사거리, 발산역 먹자골목와 대단히 인접해 있어 도보 5분 이내로 안전 진입이 가능하다 브로. 📞 010-6279-0862 로 미리 테이블이나 룸 예약을 걸어 마찰 없이 에스코트받아라 브로!</p>
+<main class="wrapper">
+    <!-- 히어로 -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>강서<br>클럽 비교</h1>
+            <p>거품 까는 비교 리뷰. 가격, 음악, 분위기, 인싸력 — 니 돈과 시간 아껴준다.</p>
+            <a class="cta-button" href="#compare">비교 시작</a>
         </div>
-      </div>
-    </main>
+        <div class="hero-visual">
+            <span>🔥</span>
+            <div class="big-number">3</div>
+            <div style="font-size:1.6rem; font-weight:700; color:#e5e5e5; border-top:4px solid #ff6b35; padding-top:16px; width:100%;">HOTSPOT<br>UNDERGROUND<br>ROOFTOP</div>
+        </div>
+    </section>
 
-    <footer class="swiss-footer">
-      <p>서울특별시 강서 일대 | 연락처: 010-6279-0862</p>
-      <p style="margin-top:20px; opacity:0.4;">&copy; 2026 강서 클럽 Guide. All Rights Reserved.</p>
-    </footer>
-  </div>
+    <!-- 비교 섹션 -->
+    <section id="compare">
+        <h2>⬇️ 실전 비교</h2>
+        <div class="compare-grid">
+            <div class="compare-card">
+                <span class="badge">#1 핫스팟</span>
+                <h3>HOTSPOT</h3>
+                <div class="rating">★★★★★</div>
+                <ul>
+                    <li><strong>입장료</strong> 20,000원</li>
+                    <li><strong>음악</strong> EDM / 힙합</li>
+                    <li><strong>인싸력</strong> ★★★★★</li>
+                    <li><strong>꼰대력</strong> ★☆☆☆☆</li>
+                </ul>
+                <p style="margin-top:16px; font-weight:400;">가장 핫한 곳. 가격은 좀 세지만 그만큼 분위기는 레전드. 단, 줄 서는 건 각오해라.</p>
+            </div>
+            <div class="compare-card">
+                <span class="badge">#2 언더그라운드</span>
+                <h3>UNDERGROUND</h3>
+                <div class="rating">★★★★☆</div>
+                <ul>
+                    <li><strong>입장료</strong> 15,000원</li>
+                    <li><strong>음악</strong> 인디 / 얼터너티브</li>
+                    <li><strong>인싸력</strong> ★★★☆☆</
 </body>
 </html>
